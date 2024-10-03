@@ -66,9 +66,10 @@ jobs:
           git pull origin main
 
           # Set up your Python environment and dependencies
+          python -m pip install --upgrade pip
+          pip install python3-venv
           python3 -m venv venv  # Create a virtual environment if not already created
           source venv/bin/activate
-          python -m pip install --upgrade pip
           pip install -r requirements.txt  # Ensure FastAPI and other dependencies are installed
        
           nohup uvicorn main:app --host 0.0.0.0 --port 8000 --reload &  # For dev, remove --reload for production
