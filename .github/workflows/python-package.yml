@@ -60,7 +60,7 @@ jobs:
       run: |
         ssh -t ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
           # Navigate to your project directory on EC2
-          cd /home/ubuntu/actions-runner-server/fastapi_folder  # Replace this with the actual path on your EC2 instance
+          cd /home/ubuntu/actions-runner-server/fastapi_folder/fastapi-deployment  # Replace this with the actual path on your EC2 instance
 
           # Pull the latest code from GitHub
           git pull origin main
