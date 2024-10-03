@@ -73,5 +73,4 @@ jobs:
           python3 -m pip install --upgrade pip
           pip install -r requirements.txt  # Ensure FastAPI and other dependencies are installed
        
-          uvicorn main:app --host 0.0.0.0 --port 8000 --reload & disown # For dev, remove --reload for production
         EOF
